@@ -1,0 +1,90 @@
+@media (max-width: 600px) {
+  .header-content h1 {
+    font-size: 5rem;
+
+    & span {
+      font-size: 5rem;
+    }
+  }
+  #home {
+    &-a,
+    &-c {
+      .about-content {
+        flex-direction: column;
+        .col-left {
+          padding-bottom: 3rem;
+        }
+      }
+    }
+  }
+  #main-footer {
+    .footer-content {
+      flex-direction: column;
+      & p {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  // form page
+  #contact {
+    &-a {
+      .text-fields {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    //b
+    &-b {
+      .contact-info {
+        grid-template-columns: 1fr;
+        & > div {
+          padding-bottom: 2rem;
+        }
+      }
+    }
+
+    //c {
+    font-size: smaller;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #header-home,
+  #header-inner {
+    .hamburger {
+      display: none;
+    }
+    .nav-list ul {
+      position: initial;
+
+      display: flex;
+      flex-direction: row;
+
+      // justify-content: center;
+      padding-top: 0;
+      height: auto;
+      width: fit-content;
+      background-color: transparent;
+
+      & li {
+        line-height: 1.5rem;
+        // padding-top: 1rem;
+        font-weight: 700;
+
+        & a {
+          color: $dark-color;
+          font-size: 1.2rem;
+          text-transform: initial;
+        }
+        & a:hover {
+          border-bottom: 2px solid $dark-color;
+        }
+
+        & a:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
